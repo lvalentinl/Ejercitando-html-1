@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*aqui buscamos en google fonts, embebed code, import para CSS*/
+*{ /*para cambios en todo el proyecto*/
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #000000;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.titulo-h1 { /* punto es para acceder a las CLASS exclusivas... debemos usar CLASS en html*/
+    color: #22d4fd;
+}
+a {
+    color: 22d4fd;
+    border: 1px solid #f6f6f6;
+    padding: 8px;
+}
+
+.presentacion-JV{
+    display: flex;
+    align-items: center;
+    margin: 10%; /*para poner margen izq der*/
+    justify-content: space-evenly; /*para justificar*/
+}
+
+.presentacion-contenido{
+    width: 615px;
+    display: flex; /*base para alinearlo y dar espaciado - osea un contendeor flex*/
+    flex-direction: column; /*cambiar la direccion del flex*/
+    gap: 40px; /*para dar espeaciado entre los elemenetos*/
+}
+
+.presentacion-h1-titulo{
+    font-size: 36px;
+    font-family: "Krona One", serif;
+}
+
+.presentacion-parrafo{
+    font-size: 24px;
+    font-family: "Montserrat", serif;
+}
+
+.presentacion-botones{/*para ubicar los botones*/
+    display: flex;
+    justify-content: space-between;    
+}
+
+.presentacion-enlaces{ /*estilizando botones*/
+    background-color: #22d4fd;
+    width: 280px;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 16px;
+    font-family: "Montserrat", serif;
+    font-size: 24px;
+    font-weight: 600; /*peso de la fuente*/
+    text-decoration: none; /*quitar el subrayado*/
+    color: #000000;
+}
