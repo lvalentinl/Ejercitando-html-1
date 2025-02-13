@@ -18,7 +18,7 @@ body{
 }
 a {
     color: 22d4fd;
-    border: 1px solid #f6f6f6;
+    /*border: 1px solid #f6f6f6; LO PONEMOS ABAJO ENLACES*/
     padding: 8px;
 }
 
@@ -49,17 +49,33 @@ a {
 .presentacion-botones{/*para ubicar los botones*/
     display: flex;
     justify-content: space-between;    
+    flex-direction: column;
+    align-items: center; /*en este caso, se cambio el eje, por eso usamos ALIGN*/
+    gap: 24px;
 }
 
-.presentacion-enlaces{ /*estilizando botones*/
-    background-color: #22d4fd;
-    width: 280px;
-    text-align: center;
+.presentacion-enlaces-subtitulo{
+    font-family: 'krona One', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.presentacion-enlaces{ /*estilizando botones*/    
+    width: 350px;
+    /*text-align: center;*/
     padding: 21.5px 0;
     border-radius: 16px;
     font-family: "Montserrat", serif;
     font-size: 24px;
     font-weight: 600; /*peso de la fuente*/
     text-decoration: none; /*quitar el subrayado*/
-    color: #000000;
+    color: #f6f6f6;
+    border: 2px solid #22d4fd;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.presentacion-enlaces:hover{
+    background-color: #272727; /*usamos hover despues de la clase para pasar cursor y cambiar de color*/
 }
