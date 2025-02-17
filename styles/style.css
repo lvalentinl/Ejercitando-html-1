@@ -1,28 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /*aqui buscamos en google fonts, embebed code, import para CSS*/
+:root{ /*asi se crean las variables, dentro de root y con doble guion*/
+    --color-primario: #021526;
+    --color-secundario: #E2E2B6;
+    --color-terciario: #6EACDA;
+    --color-hover: #03346E;
+
+    --fuente-montserrat: 'Montserrat', serif;
+    --fuente-krona-one: 'krona One', sans-serif;
+}
+
 *{ /*para cambios en todo el proyecto*/
     margin: 0;
     padding: 0;
 }
 
 body{
-    background-color: #000000;
-    color: white;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 100vh;
+    /*height: 100vh; sacamos esto pq ya creamos el footer*/ 
     box-sizing: border-box;
 }
 
+.header-link{
+    padding: 2% 0% 0% 10%; /*top right bottom left*/
+}
+
+.header-link-div{
+    display: flex;
+    gap: 50px;
+}
+
+.header-link-a{
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
 .titulo-h1 { /* punto es para acceder a las CLASS exclusivas... debemos usar CLASS en html*/
-    color: #22d4fd;
+    color: var(--color-terciario);
 }
 a {
-    color: 22d4fd;
+    color: var(--color-terciario);
     /*border: 1px solid #f6f6f6; LO PONEMOS ABAJO ENLACES*/
     padding: 8px;
 }
 
 .presentacion-JV{
+    
     display: flex;
     align-items: center;
     margin: 10%; /*para poner margen izq der*/
@@ -38,12 +66,12 @@ a {
 
 .presentacion-h1-titulo{
     font-size: 36px;
-    font-family: "Krona One", serif;
+    font-family: var(--fuente-krona-one);
 }
 
 .presentacion-parrafo{
     font-size: 24px;
-    font-family: "Montserrat", serif;
+    font-family: var(--fuente-montserrat);
 }
 
 .presentacion-botones{/*para ubicar los botones*/
@@ -55,7 +83,7 @@ a {
 }
 
 .presentacion-enlaces-subtitulo{
-    font-family: 'krona One', sans-serif;
+    font-family: var(--fuente-krona-one);
     font-size: 24px;
     font-weight: 400;
 }
@@ -65,17 +93,27 @@ a {
     /*text-align: center;*/
     padding: 21.5px 0;
     border-radius: 16px;
-    font-family: "Montserrat", serif;
+    font-family: var(--fuente-montserrat);
     font-size: 24px;
     font-weight: 600; /*peso de la fuente*/
     text-decoration: none; /*quitar el subrayado*/
-    color: #f6f6f6;
-    border: 2px solid #22d4fd;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
 .presentacion-enlaces:hover{
-    background-color: #272727; /*usamos hover despues de la clase para pasar cursor y cambiar de color*/
+    background-color: var(--color-hover); /*usamos hover despues de la clase para pasar cursor y cambiar de color*/
+}
+
+.footer-descripcion{
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+    font-weight: 400;
 }
