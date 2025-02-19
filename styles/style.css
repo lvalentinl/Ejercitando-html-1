@@ -8,6 +8,9 @@
 
     --fuente-montserrat: 'Montserrat', serif;
     --fuente-krona-one: 'krona One', sans-serif;
+
+    --font-size-24px: 1.5rem; /*1 rem = 16px*/
+    --font-size-36px: 2.25rem;
 }
 
 *{ /*para cambios en todo el proyecto*/
@@ -34,7 +37,7 @@ body{
 
 .header-link-a{
     font-family: var(--fuente-montserrat);
-    font-size: 24px;
+    font-size: var(--font-size-24px);
     font-weight: 600;
     color: var(--color-terciario);
     text-decoration: none;
@@ -54,23 +57,24 @@ a {
     display: flex;
     align-items: center;
     margin: 10%; /*para poner margen izq der*/
-    justify-content: space-evenly; /*para justificar*/
+    justify-content: space-between; /*para justificar*/
+    gap: 82px;
 }
 
 .presentacion-contenido{
-    width: 615px;
+    width: 50%;
     display: flex; /*base para alinearlo y dar espaciado - osea un contendeor flex*/
     flex-direction: column; /*cambiar la direccion del flex*/
     gap: 40px; /*para dar espeaciado entre los elemenetos*/
 }
 
 .presentacion-h1-titulo{
-    font-size: 36px;
+    font-size: var(--font-size-36px);
     font-family: var(--fuente-krona-one);
 }
 
 .presentacion-parrafo{
-    font-size: 24px;
+    font-size: var(--font-size-24px);
     font-family: var(--fuente-montserrat);
 }
 
@@ -84,17 +88,17 @@ a {
 
 .presentacion-enlaces-subtitulo{
     font-family: var(--fuente-krona-one);
-    font-size: 24px;
+    font-size: var(--font-size-24px);
     font-weight: 400;
 }
 
 .presentacion-enlaces{ /*estilizando botones*/    
-    width: 350px;
+    width: 50%;
     /*text-align: center;*/
     padding: 21.5px 0;
     border-radius: 16px;
     font-family: var(--fuente-montserrat);
-    font-size: 24px;
+    font-size: var(--font-size-24px);
     font-weight: 600; /*peso de la fuente*/
     text-decoration: none; /*quitar el subrayado*/
     color: var(--color-secundario);
@@ -108,12 +112,36 @@ a {
     background-color: var(--color-hover); /*usamos hover despues de la clase para pasar cursor y cambiar de color*/
 }
 
+.imagen-presentacion{
+    width: 50%;
+}
+
 .footer-descripcion{
     background-color: var(--color-terciario);
     padding: 24px;
     color: var(--color-primario);
     text-align: center;
     font-family: var(--fuente-montserrat);
-    font-size: 24px;
+    font-size: var(--font-size-24px);
     font-weight: 400;
+}
+/*para cambiar de tamaño o forma */
+/*! aqui ponemos solo lo q nos hace falta para los cambios*/
+@media(max-width:1200px){
+
+    .header-link{
+        padding: 10%; /*top right bottom left*/
+    }
+
+    .header-link-div{
+        justify-content: center; 
+    }
+
+    .presentacion-JV{
+        flex-direction: column-reverse;
+    }
+
+    .presentacion-contenido{
+        width: auto; /*para q se adapte automaticamente al tamaño de la caja*/
+    }
 }
